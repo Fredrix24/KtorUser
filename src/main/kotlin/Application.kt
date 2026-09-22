@@ -31,12 +31,11 @@ fun Application.module() {
     routing {
         //GET
 
-        // GET / — приветствие
         get("/") {
             call.respondText("Ktor Server is running!")
         }
 
-        // GET /users — получение списка пользователей с фильтрацией по имени
+        // GET получение списка пользователей с фильтрацией по имени
         get("/users") {
             val nameFilter = call.request.queryParameters["name"]
 
